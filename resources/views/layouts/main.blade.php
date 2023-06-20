@@ -68,6 +68,12 @@
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="{{ route('user') }}">Личный кабинет</a>
                                             </li>
+                                            @if (Auth::user()->status == 'ADMIN')
+                                                <li>
+                                                    <a class="dropdown-item" href="{{ route('admin') }}">Панель
+                                                        админа</a>
+                                                </li>
+                                            @endif
                                             <li><a class="dropdown-item"
                                                     href="{{ route('core.user.logout') }}">Выйти</a></li>
                                         </ul>
@@ -236,6 +242,27 @@
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="modal-success">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center mb-4">
+                                <svg class="text-success me-2" xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-bag-check-fill"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+                                </svg>
+                                <h1 class="modal-title fs-5">Успех</h1>
+                            </div>
+                            <hr>
+                            @if (session()->has('success'))
+                                <p>{{ session('success') }}</p>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
         <footer style="background: #d9e5e8">
@@ -356,6 +383,12 @@
     @if ($errors->any())
         <script>
             const modalErrors = new bootstrap.Modal('#modal-errors')
+            modalErrors.show();
+        </script>
+    @endif
+    @if (session()->has('success'))
+        <script>
+            const modalErrors = new bootstrap.Modal('#modal-success')
             modalErrors.show();
         </script>
     @endif
