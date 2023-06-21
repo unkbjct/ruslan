@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-sm-4 d-flex flex-column">
                     <div class="mt-auto">
-                        <button class="btn btn-success btn-sm">Перейти в каталог</button>
+                        <a href="{{ route('catalog') }}" class="btn btn-success btn-sm">Перейти в каталог</a>
                     </div>
                 </div>
             </div>
@@ -41,39 +41,45 @@
         <div class="mb-4">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="px-xl-5 py-3 border shadow-sm">
-                        <div class="px-lg-5 py-2 d-flex">
-                            <img class="mx-auto" height="123px" src="{{ asset('public/storage/trans-oil.png') }}"
-                                alt="">
+                    <a href="{{ route('catalog') }}" class="text-decoration-none">
+                        <div class="px-xl-5 py-3 border shadow-sm">
+                            <div class="px-lg-5 py-2 d-flex">
+                                <img class="mx-auto" height="123px" src="{{ asset('public/storage/trans-oil.png') }}"
+                                    alt="">
+                            </div>
+                            <h5 class="text-center">Тормозные жидкости</h5>
                         </div>
-                        <h5 class="text-center">Тормозные жидкости</h5>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-6">
-                    <div class="bg-warning px-5 py-3 border shadow-sm">
-                        <div class="px-5 py-2 d-flex">
-                            <img class="mx-auto" height="123px" src="{{ asset('public/storage/oil.png') }}" alt="">
+                    <a href="{{ route('catalog') }}" class="text-decoration-none">
+                        <div class="bg-warning px-5 py-3 border shadow-sm">
+                            <div class="px-5 py-2 d-flex">
+                                <img class="mx-auto" height="123px" src="{{ asset('public/storage/oil.png') }}"
+                                    alt="">
+                            </div>
+                            <h5 class="text-center">Моторные масла</h5>
                         </div>
-                        <h5 class="text-center">Моторные масла</h5>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
                     <div class="h-100 shadow-sm rounded">
                         <ul class="list-group d-flex flex-column">
                             <li class="list-group-item">
-                                <a class="text-decoration-none" href="">Трансмиссионные масла</a>
+                                <a class="text-decoration-none" href="{{ route('catalog') }}">Трансмиссионные масла</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none" href="">Автокосметика</a>
+                                <a class="text-decoration-none" href="{{ route('catalog') }}">Автокосметика</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none" href="">Охлаждающие жидкости</a>
+                                <a class="text-decoration-none" href="{{ route('catalog') }}">Охлаждающие жидкости</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none" href="">Жидкости для омывателя стекла</a>
+                                <a class="text-decoration-none" href="{{ route('catalog') }}">Жидкости для омывателя
+                                    стекла</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none" href="">Вся автохимия</a>
+                                <a class="text-decoration-none" href="{{ route('catalog') }}">Вся автохимия</a>
                             </li>
                         </ul>
                     </div>

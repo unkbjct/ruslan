@@ -43,7 +43,7 @@
                         </form>
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item mb-3 mb-lg-0 me-2">
-                                <a class="btn btn-secondary d-flex align-items-center">
+                                <a href="{{ route('cart') }}" class="btn btn-secondary d-flex align-items-center">
                                     <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                         fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
                                         <path
@@ -121,8 +121,8 @@
                             </li> --}}
                             <li class="nav-item me-4">
                                 <a class="nav-link text-white d-flex align-items-center" href="{{ route('catalog') }}">
-                                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
                                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                                     </svg>
